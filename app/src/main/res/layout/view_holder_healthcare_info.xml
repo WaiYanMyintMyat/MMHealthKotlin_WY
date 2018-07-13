@@ -52,7 +52,9 @@
                 android:layout_marginStart="@dimen/margin_small"
                 android:layout_toRightOf="@+id/tv_pretty"
                 android:padding="@dimen/margin_smallest"
-                android:text="Wai Yan J" />
+                android:text="Wai Yan J"
+                android:ellipsize="end"
+                android:maxLength="6"/>
 
             <RelativeLayout
                 android:id="@+id/rl_view"
