@@ -8,7 +8,7 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
-class MMHealthModel {
+class MMHealthModel private constructor() {
     companion object {
         private var instanceObj: MMHealthModel? = null
 
@@ -21,17 +21,14 @@ class MMHealthModel {
             if (instanceObj == null) {
                 instanceObj = MMHealthModel()
             }
-            return instanceObj
+
+            val i = instanceObj
+            return i!!
         }
     }
 
 
     private var mDataRepo: HashMap<Int, HealthCareInfoVO> = HashMap()
-
-    private constructor() {
-        mDataAgent = RetrofitDataAgentImpl.getInstanceObject()
-        EventBus.getDefault().register(this)
-    }
 
     fun loadHealthCareInfo() {
         mDataAgent!!.loadHealthCareInfo(ACCESS_TOKEN)
@@ -50,5 +47,10 @@ class MMHealthModel {
 
     fun getHealthInfoById(id: Int):HealthCareInfoVO?{
         return mDataRepo[id]
+    }
+
+    init {
+        mDataAgent = RetrofitDataAgentImpl.getInstanceObject()
+        EventBus.getDefault().register(this)
     }
 }

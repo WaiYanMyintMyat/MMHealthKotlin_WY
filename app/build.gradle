@@ -36,7 +36,7 @@ dependencies {
 
     //Third party libs
     //Under All libs------***** for Samsung Phone
-    //implementation 'org.mmtextview:mmtextview:1.9'
+    implementation 'org.mmtextview:mmtextview:1.9'
 
     //Green robot Event Bus
     implementation 'org.greenrobot:eventbus:3.1.1'

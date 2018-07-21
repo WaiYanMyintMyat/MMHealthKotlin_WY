@@ -12,11 +12,11 @@
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_normal">
 
-        <TextView
+        <org.mmtextview.components.MMTextView
             android:id="@+id/tv_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/text_large"
+            android:textSize="@dimen/text_normal"
             android:text="Health is the ability of a biological system to acquire, convert, allocate, distribute." />
 
         <ImageView
@@ -34,16 +34,17 @@
             android:layout_below="@+id/iv_hero"
             android:layout_marginTop="@dimen/margin_small">
 
-            <TextView
+            <org.mmtextview.components.MMTextView
                 android:id="@+id/tv_pretty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_pretty_border"
                 android:padding="@dimen/margin_smallest"
                 android:text="Pretty"
+                android:textSize="10sp"
                 android:textColor="@color/colorPrettyBlue" />
 
-            <TextView
+            <org.mmtextview.components.MMTextView
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,29 +54,30 @@
                 android:layout_toRightOf="@+id/tv_pretty"
                 android:padding="@dimen/margin_smallest"
                 android:text="Wai Yan J"
-                android:ellipsize="end"
-                android:maxLength="6"/>
+                android:textSize="10sp"/>
 
             <RelativeLayout
                 android:id="@+id/rl_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_small"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/tv_name">
 
                 <ImageView
                     android:id="@+id/iv_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
                     android:src="@drawable/ic_assignment_turned_in_black_24dp" />
 
-                <TextView
+                <org.mmtextview.components.MMTextView
                     android:id="@+id/tv_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_toRightOf="@+id/iv_view"
-                    android:text="5302" />
+                    android:text="5302"
+                    android:textSize="10sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -83,22 +85,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_small"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/rl_view">
 
                 <ImageView
                     android:id="@+id/iv_comment"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
                     android:layout_marginTop="2dp"
                     android:src="@drawable/ic_comment_black_24dp" />
 
-                <TextView
+                <org.mmtextview.components.MMTextView
                     android:id="@+id/tv_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_toRightOf="@+id/iv_comment"
-                    android:text="229" />
+                    android:text="229"
+                    android:textSize="10sp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -106,21 +110,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_small"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/rl_comment">
 
                 <ImageView
                     android:id="@+id/iv_like"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
                     android:src="@drawable/ic_thumb_up_black_24dp" />
 
-                <TextView
+                <org.mmtextview.components.MMTextView
                     android:id="@+id/tv_like"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_toRightOf="@+id/iv_like"
-                    android:text="56" />
+                    android:text="56"
+                    android:textSize="10sp"/>
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>

@@ -23,7 +23,9 @@ class RetrofitDataAgentImpl : MMHealthCareDataAgent {
             if (instanceObj == null) {
                 instanceObj = RetrofitDataAgentImpl()
             }
-            return instanceObj
+
+            val i = instanceObj
+            return i!!
         }
     }
 
